@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.sessl</groupId>
+	<artifactId>sample-experiments</artifactId>
+	<packaging>jar</packaging>
+	<version>0.1-SNAPSHOT</version>
+	<name>Sample Experiment Project</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<scala.version>2.10.2</scala.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>sessl.org</id>
+			<url>http://sessl.org/maven</url>
+		</repository>
+		<repository>
+			<id>scala-tools.org</id>
+			<url>http://scala-tools.org/repo-releases</url>
+		</repository>
+	</repositories>
+
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>scala-tools.org</id>
+			<name>Scala-tools Maven2 Repository</name>
+			<url>http://scala-tools.org/repo-releases</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.sessl</groupId>
+			<artifactId>sessl-james</artifactId>
+			<version>0.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sessl</groupId>
+			<artifactId>sessl-opt4j</artifactId>
+			<version>0.8</version>
+		</dependency>
+	</dependencies>
+
+
+	<!-- BUILDING -->
+	<build>
+		<sourceDirectory>src/main/scala</sourceDirectory>
+		<testSourceDirectory>src/test/scala</testSourceDirectory>
+
+		<plugins>
+			<!-- Scala support -->
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<jvmArgs>
+						<jvmArg>-Xms64m</jvmArg>
+						<jvmArg>-Xmx1024m</jvmArg>
+					</jvmArgs>
+					<args>
+						<arg>-deprecation</arg>
+						<arg>-feature</arg>
+					</args>
+					<launchers>
+						<launcher>
+							<id>experiments</id>
+							<mainClass>SampleExperiments</mainClass>
+							<jvmArgs>
+								<jvmArg>-Dsample.resources=/src/main/resources</jvmArg>
+							</jvmArgs>
+						</launcher>
+					</launchers>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -2,7 +2,7 @@ SESSL Sample Experiments
 ========================
 
 Some sample experiments to get you started with SESSL (http://sessl.org).
-All experiments are currently executed with JAMES II (http://jamesii.org).
+All samples are currently executed with JAMES II (http://jamesii.org).
 
 Prerequisites:
 ==============

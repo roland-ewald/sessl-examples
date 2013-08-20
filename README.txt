@@ -17,4 +17,6 @@ How to use from command line:
 
 This should execute the experiments and generate several .csv files with simulation and optimization output.
 
+You can create zip/tar.gz files that contain everything to execute the experiments on a computer where Java 1.7 is installed by executing 'mvn package' (see target directory).
+
 The experiments are specified in a single file: src/main/scala/SampleExperiments.

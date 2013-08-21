@@ -15,7 +15,7 @@ How to use from command line:
 2. cd sessl-samples
 3. mvn scala:run
 
-This should execute the experiment in src/main/scala/org/sessl/samples/MLRulesExperiment and generate a CSV file with simulation and optimization output.
+This should execute the experiment in src/main/scala/org/sessl/samples/MLRulesExperiment and generate a CSV file with simulation output.
 
 You can run other experiments with the following commands:
 

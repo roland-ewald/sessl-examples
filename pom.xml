@@ -11,6 +11,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<scala.version>2.10.2</scala.version>
 		<sessl.version>0.8</sessl.version>
+		<sessl.launch.args>-Dsample.resources=/src/main/resources</sessl.launch.args>
 	</properties>
 
 	<repositories>
@@ -85,10 +86,24 @@
 					</args>
 					<launchers>
 						<launcher>
-							<id>experiments</id>
-							<mainClass>SampleExperiments</mainClass>
+							<id>mlrules</id>
+							<mainClass>org.sessl.samples.MLRulesExperiment</mainClass>
 							<jvmArgs>
-								<jvmArg>-Dsample.resources=/src/main/resources</jvmArg>
+								<jvmArg>${sessl.launch.args}</jvmArg>
+							</jvmArgs>
+						</launcher>
+						<launcher>
+							<id>sr</id>
+							<mainClass>org.sessl.samples.SRExperiment</mainClass>
+							<jvmArgs>
+								<jvmArg>${sessl.launch.args}</jvmArg>
+							</jvmArgs>
+						</launcher>
+						<launcher>
+							<id>optimization</id>
+							<mainClass>org.sessl.samples.OptimizationExperiment</mainClass>
+							<jvmArgs>
+								<jvmArg>${sessl.launch.args}</jvmArg>
 							</jvmArgs>
 						</launcher>
 					</launchers>
@@ -102,7 +117,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<!-- Packaging -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

@@ -1,1 +1,1 @@
-java -cp "./*;libs/*" SampleExperiments
+java -cp "./*;libs/*" org.sessl.samples.MLRulesExperiment

@@ -42,7 +42,7 @@ You can let them point to your own experiment, or add your own scripts.
 Model location:
 ===============
 
-Note that model locations should be define as a relative path, using the value 'dir' (defined in the org.sessl.samples package object), e.g.:
+Note that model locations should be defined as a relative path, using the value 'dir' (defined in the org.sessl.samples package object), e.g.:
 
 model = "file-mlrj:/." + dir + "/EndoExoCytosis.mlrj"
 

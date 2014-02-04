@@ -10,7 +10,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<scala.version>2.10.2</scala.version>
-		<sessl.version>0.8</sessl.version>
+		<sessl.version>0.9</sessl.version>
 		<sessl.launch.args>-Dsample.resources=/src/main/resources</sessl.launch.args>
 	</properties>
 
